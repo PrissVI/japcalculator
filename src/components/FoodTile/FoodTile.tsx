@@ -43,7 +43,7 @@ export const FoodTile: React.FC<Props> = (props: Props) => {
     <div className={classes.container}>
       <img src={imgSrc} alt={name} className={classes.image} />
       <div className={classes.nameContainer}>
-        <span className={classes.name}>{name}</span>
+        <span className={classes.name}>{value > 1 ? name + "s" : name}</span>
 
         <div className={classes.controls}>
           <span className={classes.button} onClick={handleChange(value - 1)}>

@@ -17,7 +17,6 @@ jobs:
 
       - run: curl -o- -L https://yarnpkg.com/install.sh | bash
       - run: yarn install
-      - run: npx yarn-audit-fix
 
       - save_cache:
           paths:
@@ -26,7 +25,6 @@ jobs:
 
       # run tests!
       - run: yarn test
-      - run: yarn audit
       - run: yarn build
 
 workflows:
